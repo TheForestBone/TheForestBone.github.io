@@ -20,28 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"theforestbone.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前几日观赏了reuixiy大佬的博客，被其精美且小清新范的页面深深吸引了。今天准备在NexT主题上设置其同款渐变毛玻璃。但是出现了不少问题，比如不兼容整体NexT的风格，加入图标报错等等。由于自己的js基础匮乏，除了更改渐变色成功之外并没有多大的收获。折腾了一上午之后才发现：NexT就是NexT，即使加入再好看的元素都不能掩盖其主题本质表达的简约美。于是我决定遵从极简原则，除了我的小猫以外，短期内">
+    <meta name="description" content="早前接触过Python的时候就被这些定义搞得含混不清，但是不理解的事物会一直成为一个绊脚石。今天下定决心要将这些知识彻底搞懂吸收，故在此写下知识要点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="6-4日记">
-<meta property="og:url" content="http://theforestbone.github.io/2022/06/04/6-4%E9%9A%8F%E6%83%B3/index.html">
+<meta property="og:title" content="Python的列表，元组，集合和词典">
+<meta property="og:url" content="http://theforestbone.github.io/2022/06/07/Python%E7%9A%84%E9%9B%86%E5%90%88%EF%BC%8C%E5%85%83%E7%BB%84%E7%AD%89/index.html">
 <meta property="og:site_name" content="森林巨骨">
-<meta property="og:description" content="前几日观赏了reuixiy大佬的博客，被其精美且小清新范的页面深深吸引了。今天准备在NexT主题上设置其同款渐变毛玻璃。但是出现了不少问题，比如不兼容整体NexT的风格，加入图标报错等等。由于自己的js基础匮乏，除了更改渐变色成功之外并没有多大的收获。折腾了一上午之后才发现：NexT就是NexT，即使加入再好看的元素都不能掩盖其主题本质表达的简约美。于是我决定遵从极简原则，除了我的小猫以外，短期内">
+<meta property="og:description" content="早前接触过Python的时候就被这些定义搞得含混不清，但是不理解的事物会一直成为一个绊脚石。今天下定决心要将这些知识彻底搞懂吸收，故在此写下知识要点。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-04T02:52:49.270Z">
-<meta property="article:modified_time" content="2022-06-04T08:23:47.124Z">
+<meta property="article:published_time" content="2022-06-07T01:36:12.520Z">
+<meta property="article:modified_time" content="2022-06-07T02:29:05.155Z">
 <meta property="article:author" content="Yuchen Ding">
-<meta property="article:tag" content="日记">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://theforestbone.github.io/2022/06/04/6-4%E9%9A%8F%E6%83%B3/">
+<link rel="canonical" href="http://theforestbone.github.io/2022/06/07/Python%E7%9A%84%E9%9B%86%E5%90%88%EF%BC%8C%E5%85%83%E7%BB%84%E7%AD%89/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://theforestbone.github.io/2022/06/04/6-4%E9%9A%8F%E6%83%B3/","path":"2022/06/04/6-4随想/","title":"6-4日记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://theforestbone.github.io/2022/06/07/Python%E7%9A%84%E9%9B%86%E5%90%88%EF%BC%8C%E5%85%83%E7%BB%84%E7%AD%89/","path":"2022/06/07/Python的集合，元组等/","title":"Python的列表，元组，集合和词典"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>6-4日记 | 森林巨骨</title>
+<title>Python的列表，元组，集合和词典 | 森林巨骨</title>
   
 
 
@@ -104,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -117,6 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E7%B4%A2%E5%BC%95"><span class="nav-number">1.1.</span> <span class="nav-text">创建和索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">复制列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.</span> <span class="nav-text">合并列表</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +180,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://theforestbone.github.io/2022/06/04/6-4%E9%9A%8F%E6%83%B3/">
+    <link itemprop="mainEntityOfPage" href="http://theforestbone.github.io/2022/06/07/Python%E7%9A%84%E9%9B%86%E5%90%88%EF%BC%8C%E5%85%83%E7%BB%84%E7%AD%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,12 +193,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="6-4日记 | 森林巨骨">
+      <meta itemprop="name" content="Python的列表，元组，集合和词典 | 森林巨骨">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          6-4日记
+          Python的列表，元组，集合和词典
         </h1>
 
         <div class="post-meta-container">
@@ -209,7 +210,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-06-04 10:52:49 / 修改时间：16:23:47" itemprop="dateCreated datePublished" datetime="2022-06-04T10:52:49+08:00">2022-06-04</time>
+      <time title="创建时间：2022-06-07 09:36:12 / 修改时间：10:29:05" itemprop="dateCreated datePublished" datetime="2022-06-07T09:36:12+08:00">2022-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -217,7 +218,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日记</span></a>
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
         </span>
     </span>
 
@@ -231,7 +232,73 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>前几日观赏了reuixiy大佬的<a target="_blank" rel="noopener" href="https://io-oi.me/">博客</a>，被其精美且小清新范的页面深深吸引了。<br>今天准备在NexT主题上设置其同款渐变毛玻璃。但是出现了不少问题，比如不兼容整体NexT的风格，加入图标报错等等。<br>由于自己的js基础匮乏，除了更改渐变色成功之外并没有多大的收获。折腾了一上午之后才发现：NexT就是NexT，即使加入再好看的元素都不能掩盖其主题本质表达的简约美。于是我决定遵从极简原则，除了我的小猫以外，短期内不会加入任何东西，而是把精力放在学习身上。希望我在毕业之前能写出真正有价值的文章，并继续考虑自己的读博意愿。</p>
+        <p>早前接触过Python的时候就被这些定义搞得含混不清，但是不理解的事物会一直成为一个绊脚石。今天下定决心要将这些知识彻底搞懂吸收，故在此写下知识要点。</p>
+<span id="more"></span>
+
+<p>1.列表（List）是一种有序和可更改的集合。允许重复的成员。<br>2.元组（Tuple）是一种有序且不可更改的集合。允许重复的成员。<br>3.集合（Set）是一个无序和无索引的集合。没有重复的成员。<br>4.词典（Dictionary）是一个无序，可变和有索引的集合。没有重复的成员。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="创建和索引"><a href="#创建和索引" class="headerlink" title="创建和索引"></a>创建和索引</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mylist = [<span class="string">&#x27;fuck&#x27;</span>,<span class="string">&#x27;this&#x27;</span>,<span class="string">&#x27;shit&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(mylist) <span class="comment">#创建</span></span><br><span class="line"><span class="built_in">print</span>(mylist[1]) <span class="comment">#第一个元素序号是0</span></span><br><span class="line"><span class="built_in">print</span>(mylist[2:5]) <span class="comment">#索引范围</span></span><br><span class="line">mylist[1] = <span class="string">&#x27;you&#x27;</span> <span class="comment">#更改某一项</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mylist:</span><br><span class="line">  <span class="built_in">print</span>(x) <span class="comment">#遍历列表</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;shit&#x27;</span> <span class="keyword">in</span> mylist:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;Oh,yeah!&#x27;</span>)</span><br><span class="line">mylist.append(<span class="string">&#x27;she&#x27;</span>) <span class="comment">#追加项目</span></span><br><span class="line">mylist.insert(2,<span class="string">&#x27;bloody&#x27;</span>) <span class="comment">#插入项目</span></span><br><span class="line">mylist.remove(<span class="string">&#x27;fuck&#x27;</span>) <span class="comment">#删除指定项目</span></span><br><span class="line">del mylist[0] <span class="comment">#按索引删除，不加索引即删除整个列表</span></span><br><span class="line">mylist.clear() <span class="comment">#清空列表</span></span><br></pre></td></tr></table></figure>
+<h3 id="复制列表"><a href="#复制列表" class="headerlink" title="复制列表"></a>复制列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copylist = mylist.copy()</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copylist = list(mylist)</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并列表"><a href="#合并列表" class="headerlink" title="合并列表"></a>合并列表</h3><p>最简单的方式是使用+，如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list3 = list1 + list2</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1.extend(list2)</span><br></pre></td></tr></table></figure>
+
+<p>总结：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>append()</td>
+<td>在列表的末尾添加一个元素</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>删除列表中的所有元素</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>返回列表的副本</td>
+</tr>
+<tr>
+<td>count()</td>
+<td>返回具有指定值的元素数量。</td>
+</tr>
+<tr>
+<td>extend()</td>
+<td>将列表元素（或任何可迭代的元素）添加到当前列表的末尾</td>
+</tr>
+<tr>
+<td>index()</td>
+<td>返回具有指定值的第一个元素的索引</td>
+</tr>
+<tr>
+<td>insert()</td>
+<td>在指定位置添加元素</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>删除指定位置的元素</td>
+</tr>
+<tr>
+<td>remove()</td>
+<td>删除具有指定值的项目</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>颠倒列表的顺序</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>对列表进行排序</td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -241,21 +308,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag"># 日记</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/06/04/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9A%84%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E6%89%98%E7%AE%A1/" rel="prev" title="腾讯云的静态网页托管">
-                  <i class="fa fa-chevron-left"></i> 腾讯云的静态网页托管
+                <a href="/2022/06/05/6-5%E9%9A%8F%E6%83%B3/" rel="prev" title="6-5日记">
+                  <i class="fa fa-chevron-left"></i> 6-5日记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/06/05/6-5%E9%9A%8F%E6%83%B3/" rel="next" title="6-5日记">
-                  6-5日记 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
