@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dingyuchen.gitee.io/2022/06/09/%E9%9B%85%E6%80%9D%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</loc>
+    
+    <lastmod>2022-06-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dingyuchen.gitee.io/about/index.html</loc>
     
     <lastmod>2022-06-14</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://dingyuchen.gitee.io/2022/06/04/Markdown%E7%9A%84html%E6%B3%A8%E8%A7%A3/</loc>
-    
-    <lastmod>2022-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dingyuchen.gitee.io/2022/06/09/%E9%9B%85%E6%80%9D%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/</loc>
     
     <lastmod>2022-06-11</lastmod>
     
