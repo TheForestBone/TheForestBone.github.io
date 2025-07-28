@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://theforestbone.github.io/2025/07/28/7_28/</loc>
+    
+    <lastmod>2025-07-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://theforestbone.github.io/2025/07/28/hello-world/</loc>
     
     <lastmod>2025-07-28</lastmod>
@@ -29,15 +38,6 @@
   </url>
   
   <url>
-    <loc>https://theforestbone.github.io/2025/07/28/7_28/</loc>
-    
-    <lastmod>2025-07-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://theforestbone.github.io/about/index.html</loc>
     
     <lastmod>2025-07-28</lastmod>
@@ -55,24 +55,10 @@
   </url>
 
   
-  <url>
-    <loc>https://theforestbone.github.io/tags/Hexo/</loc>
-    <lastmod>2025-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://theforestbone.github.io/tags/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2025-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://theforestbone.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://theforestbone.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
