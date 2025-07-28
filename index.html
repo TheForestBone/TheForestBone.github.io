@@ -137,9 +137,19 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -219,6 +229,109 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theforestbone.github.io/2025/07/28/7_28/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yuchen Ding">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Next">
+      <meta itemprop="description" content="Live Yourself">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Next">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/28/7_28/" class="post-title-link" itemprop="url">Bellman方程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-07-28 10:00:00 / 修改时间：16:26:27" itemprop="dateCreated datePublished" datetime="2025-07-28T10:00:00+08:00">2025-07-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><ul>
+<li><strong>tags</strong>: 定义该文章的标签，多个标签用短横线分隔。</li>
+<li><strong>categories</strong>: 定义该文章的分类。</li>
+<li><strong>date</strong>: 文章的创建时间。</li>
+</ul>
+<h3 id="2-Bellman-方程讲解"><a href="#2-Bellman-方程讲解" class="headerlink" title="2. Bellman 方程讲解"></a>2. <strong>Bellman 方程讲解</strong></h3><p><strong>Bellman 方程</strong> 是动态规划中的核心方程，广泛应用于强化学习和最优控制等领域。它描述了一个最优决策过程如何通过递归地分解问题来找到最优策略。</p>
+<h4 id="Bellman-方程的一般形式："><a href="#Bellman-方程的一般形式：" class="headerlink" title="Bellman 方程的一般形式："></a>Bellman 方程的一般形式：</h4><p>对于给定的状态 ( s )，动作 ( a )，以及环境的转移函数，Bellman 方程可以表示为：</p>
+<p>$$V(s) &#x3D; \max_a \left[ R(s, a) + \gamma \sum_{s’} P(s’ | s, a) V(s’) \right]$$</p>
+<ul>
+<li><strong>( V(s) )</strong>：状态 ( s ) 的价值。</li>
+<li><strong>( R(s, a) )</strong>：在状态 ( s ) 下采取动作 ( a ) 获得的即时奖励。</li>
+<li><strong>( \gamma )</strong>：折扣因子，介于 0 和 1 之间，表示未来奖励的价值。</li>
+<li><strong>( P(s’ | s, a) )</strong>：从状态 ( s ) 采取动作 ( a ) 后转移到状态 ( s’ ) 的概率。</li>
+<li><strong>( V(s’) )</strong>：下一状态 ( s’ ) 的价值。</li>
+</ul>
+<p>Bellman 方程的核心思想是：当前状态的价值是通过选择最优动作来获取即时奖励和未来状态的折扣价值的总和。</p>
+<h4 id="Bellman-最优方程："><a href="#Bellman-最优方程：" class="headerlink" title="Bellman 最优方程："></a>Bellman 最优方程：</h4><p>在最优策略下，Bellman 方程变为：</p>
+<p>[<br>V^<em>(s) &#x3D; \max_a \left[ R(s, a) + \gamma \sum_{s’} P(s’ | s, a) V^</em>(s’) \right]<br>]</p>
+<p>这是强化学习中的 <strong>价值迭代算法</strong> 的核心，它通过反复计算每个状态的价值，最终找到最优策略。</p>
+<h4 id="强化学习中的应用："><a href="#强化学习中的应用：" class="headerlink" title="强化学习中的应用："></a>强化学习中的应用：</h4><p>在强化学习中，Bellman 方程用于描述智能体如何根据状态和动作的价值评估来决定最佳策略。在 Q-learning 和 Deep Q-Network（DQN）等算法中，智能体通过学习 Q 值（即状态-动作值）来寻找最优策略。</p>
+<h3 id="3-总结："><a href="#3-总结：" class="headerlink" title="3. 总结："></a>3. <strong>总结</strong>：</h3><ul>
+<li>你已经成功地为你的文章添加了标签和分类，帮助你组织博客内容。</li>
+<li><strong>Bellman 方程</strong> 是强化学习中的基础，通过递归的方式计算每个状态的价值，用于寻找最优策略。</li>
+</ul>
 
       
     </div>
