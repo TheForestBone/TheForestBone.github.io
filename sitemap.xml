@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://theforestbone.github.io/2025/07/28/7_29/</loc>
+    
+    <lastmod>2025-07-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://theforestbone.github.io/2025/07/28/7_28/</loc>
     
     <lastmod>2025-07-28</lastmod>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>https://theforestbone.github.io/</loc>
-    <lastmod>2025-07-28</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -59,7 +68,7 @@
   
   <url>
     <loc>https://theforestbone.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2025-07-28</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
