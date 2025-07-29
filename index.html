@@ -62,6 +62,12 @@
 
 
 
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
@@ -361,7 +367,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-07-29 17:54:16" itemprop="dateModified" datetime="2025-07-29T17:54:16+08:00">2025-07-29</time>
+      <time title="修改时间：2025-07-29 22:26:08" itemprop="dateModified" datetime="2025-07-29T22:26:08+08:00">2025-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -385,9 +391,9 @@
     <div class="post-body" itemprop="articleBody">
           <p>今天开始正式投入随机控制的学习，感觉还不错？</p>
 <p>Ito过程看起来和经典SDE的形式一样，但Ito的随机项已经固定是Brown运动了，SDE的随机项并不固定。</p>
-<h3 id="伊藤过程与伊藤积分的关系"><a href="#伊藤过程与伊藤积分的关系" class="headerlink" title="伊藤过程与伊藤积分的关系"></a>伊藤过程与伊藤积分的关系</h3><p>伊藤过程是一个由布朗运动驱动的随机过程，它的变化（(dX_t)）包含了布朗运动的增量项（(dW_t)）。因此，伊藤过程本质上是通过布朗运动的增量来描述的，而布朗运动本身是不可预测的，因此我们无法使用传统的积分方法来描述伊藤过程的演化。</p>
+<h3 id="伊藤过程与伊藤积分的关系"><a href="#伊藤过程与伊藤积分的关系" class="headerlink" title="伊藤过程与伊藤积分的关系"></a>伊藤过程与伊藤积分的关系</h3><p>伊藤过程是一个由布朗运动驱动的随机过程，它的变化 $dX_t$ 包含了布朗运动的增量项 $dW_t$ 。因此，伊藤过程本质上是通过布朗运动的增量来描述的，而布朗运动本身是不可预测的，因此我们无法使用传统的积分方法来描述伊藤过程的演化。</p>
 <p>伊藤积分正是为了解决这种随机过程的积分问题而引入的。它允许我们对像布朗运动这样的随机过程进行积分。具体来说，在描述伊藤过程时，我们会遇到以布朗运动的增量为基础的积分，这就是伊藤积分。</p>
-<p>例如，考虑一个简单的伊藤过程：<br>[<br>dX_t &#x3D; \mu(X_t, t) dt + \sigma(X_t, t) dW_t<br>]<br>其中 (dW_t) 是布朗运动的增量。为了求解这个方程的解（例如求 (X_t) 的路径），我们需要对随机过程进行积分：<br>[<br>X_t &#x3D; X_0 + \int_0^t \mu(X_s, s) ds + \int_0^t \sigma(X_s, s) dW_s<br>]<br>这里，第二项就是伊藤积分：<br>[<br>\int_0^t \sigma(X_s, s) dW_s<br>]<br>它是一个以布朗运动增量为基础的积分，帮助我们处理随机过程的随机扰动部分。</p>
+<p>例如，考虑一个简单的伊藤过程：<br>$$<br>dX_t &#x3D; \mu(X_t, t) dt + \sigma(X_t, t) dW_t<br>$$<br>其中 $dW_t$ 是布朗运动的增量。为了求解这个方程的解（例如求 $X_t$ 的路径），我们需要对随机过程进行积分：<br>$$<br>X_t &#x3D; X_0 + \int_0^t \mu(X_s, s) ds + \int_0^t \sigma(X_s, s) dW_s<br>$$<br>这里，第二项就是伊藤积分：<br>$$<br>\int_0^t \sigma(X_s, s) dW_s<br>$$<br>它是一个以布朗运动增量为基础的积分，帮助我们处理随机过程的随机扰动部分。</p>
 
       
     </div>
